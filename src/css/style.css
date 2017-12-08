@@ -1,0 +1,9 @@
+body {
+    padding-top: 90px;
+    font-family: Karla;
+}
+
+.card {
+    margin: 20px;
+    width: 20rem;
+}
