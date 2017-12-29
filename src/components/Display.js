@@ -45,9 +45,11 @@ class Display extends Component {
         }
         return (
             <div className="container">
+            <div className="row">
                 <br />
                 <br />
                 {views}
+                </div>
             </div>
         )
     }

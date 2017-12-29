@@ -27,7 +27,7 @@ class Select extends Component {
                 let sourcesData = response.data;
                 this.setState({ data: sourcesData.sources });
             })
-        console.log(this.state.value);
+        console.log(this.state.data);
     }
 
     // Render Method
@@ -35,12 +35,17 @@ class Select extends Component {
         const allSources = this.state.data;
         return (
             <div>
+              <div className="row text-center">
+              <div className="col-lg-12">
                 <select value={this.state.value} onChange={this.onChange}>
                     {
                         Object.keys(allSources).map(paper => <option key={paper} value={allSources[paper].id}>{allSources[paper].name}</option>)
                     }
                 </select>
-                <div className="row">
+                </div>
+              </div>
+              <br />
+              <div className="row">
                     <br />
                     <Display default={this.state.value} />
                 </div>
